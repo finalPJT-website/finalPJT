@@ -507,7 +507,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 #about .about-container .icon-box .icon i {
-  color: #007bff;
+  color: #fff;
   font-size: 24px;
   line-height: 0;
 }
