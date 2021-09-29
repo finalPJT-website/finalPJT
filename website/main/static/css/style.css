@@ -100,7 +100,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header .logo img {
   padding: 0;
-  max-height: 26px;
+  height:45px;
+  /* max-height: 26px; */
 }
 
 /*--------------------------------------------------------------
@@ -288,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   position: relative;
-  background: url("../img/hero-bg.png") center bottom no-repeat;
+  background: url("../img/traffic.jpg") center bottom no-repeat;
   background-size: cover;
   padding: 200px 0 120px 0;
 }
