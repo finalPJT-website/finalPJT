@@ -55,12 +55,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">메인</a></li>
-          <li><a class="nav-link scrollto" href="#about">소개</a></li>
-          <li><a class="nav-link scrollto" href="#services">서비스</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">시각화</a></li>
-          <li><a class="nav-link scrollto" href="#team">팀소개</a></li>
-          <li class="dropdown"><a href="#"><span>드랍다운</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="#hero">Main</a></li>
+          <li><a class="nav-link scrollto" href="#about">Exhibit</a></li>
+          <li><a class="nav-link scrollto" href="#back">Backgroud</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Visulization</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          {% comment %} <li class="dropdown"><a href="#"><span>드랍다운</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -75,9 +76,9 @@
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul> {% endcomment %}
+          {% comment %} </li> {% endcomment %}
+          {% comment %} <li><a class="nav-link scrollto" href="#contact">Contact</a></li> {% endcomment %}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -217,9 +218,13 @@
 
 
 
-  <main id="main">
+  {% comment %} <main id="main"> {% endcomment %}
 
     <!-- ======= About Section ======= -->
+
+  <section id="back">
+
+
     <section id="about">
       <div class="container" data-aos="fade-up">
 
