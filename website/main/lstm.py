@@ -36,11 +36,11 @@ def model_load2():
 
     #test_gwang_feature = np.load('/content/drive/MyDrive/DS_project/test_gwang_feature.npy')
     test_gwang_feature = np.load(
-        'C:/Users/cityo/Desktop/Git_Space/finalPJT/website/main/test_gwang_feature.npy')
+        './main/test_gwang_feature.npy')
 
     # 저장한 모델 로드하고 예측
     reconstructed_model = tf.keras.models.load_model(
-        'C:/Users/cityo/Desktop/Git_Space/finalPJT/website/main/gwang_checkpoint.h5')
+        './main/gwang_checkpoint.h5')
     pred = reconstructed_model.predict(test_gwang_feature)
 
     # minmaxscaling 복원
