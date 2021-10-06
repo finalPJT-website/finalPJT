@@ -32,7 +32,7 @@
 			<div class="page-inner">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 					<div>
-						<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
+						<h1 class="text-white pb-2 fw-bold">Traffic Data Visulization (차조심하조) </h1>
 					</div>
 				</div>
 			</div>
@@ -43,12 +43,16 @@
 					<div id="map" style="width:100%;height:500px;margin-top:70px;margin-bottom:70px;"></div>					
 				</div>
 			</div>
-			<div class="row">
+
+
+
+
+<div class="row">
 				<div class="col-md-8">
 					<div class="card">
 						<div class="card-header">
 							<div class="card-head-row">
-								<div class="card-title">User Statistics</div>
+								<div class="card-title">Traffic Road Graph</div>
 								<div class="card-tools">
 									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
 										<span class="btn-label">
@@ -66,8 +70,17 @@
 							</div>
 						</div>
 						<div class="card-body">
-							<div class="chart-container" style="min-height: 375px">
-								<canvas id="statisticsChart"></canvas>
+							<div class="chart-container" style="min-height: 500px">
+								{% comment %} <canvas id="statisticsChart"></canvas> {% endcomment %}
+									    
+									<img 
+										src="/static/dashboard/img/abcabc.png"
+										width="100%" 
+										height="200%"
+										align="center">
+
+
+										
 							</div>
 							<div id="myChartLegend"></div>
 						</div>
@@ -76,12 +89,12 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-							<div class="card-title">Daily Sales</div>
-							<div class="card-category">March 25 - April 02</div>
+							<div class="card-title">Daily Road Traffic risk</div>
+							<div class="card-category">now time 2021-10-06</div>
 						</div>
 						<div class="card-body pb-0">
 							<div class="mb-4 mt-2">
-								<h1>$4,578.58</h1>
+								<h1><-- 현재 미완성 상태. 예시이미지</h1>
 							</div>
 							<div class="pull-in">
 								<canvas id="dailySalesChart"></canvas>
@@ -90,9 +103,104 @@
 					</div>
 					<div class="card">
 						<div class="card-body pb-0">
+							<div class="h1 fw-bold float-right text-warning">15%</div>
+							<h2 class="mb-2">----</h2>
+							<p class="text-muted">----</p>
+							<div class="pull-in sparkline-fix">
+								<div id="lineChart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="row">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-head-row">
+								<div class="card-title">Traffic Forecasting</div>
+								<div class="card-tools">
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+										<span class="btn-label">
+											<i class="fa fa-pencil"></i>
+										</span>
+										Export
+									</a>
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm">
+										<span class="btn-label">
+											<i class="fa fa-print"></i>
+										</span>
+										Print
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container" style="min-height: 500px">
+								{% comment %} <canvas id="statisticsChart"></canvas> {% endcomment %}
+									    
+									<img 
+										src="/static/dashboard/img/abcabc.png"
+										width="100%" 
+										height="200%"
+										align="center">
+
+
+										
+							</div>
+							<div id="myChartLegend"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card card-primary">
+						<div class="card-header">
+							<div class="card-title">Daily Road Traffic Forecast</div>
+							<div class="card-category">now time 2021-10-06</div>
+						</div>
+						<div class="card-body pb-0">
+							<div class="mb-4 mt-2">
+								<h1></h1>
+							</div>
+							{% comment %} <div class="pull-in">
+								<canvas id="dailySalesChart"></canvas>
+							</div> {% endcomment %}
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body pb-0">
 							<div class="h1 fw-bold float-right text-warning">+7%</div>
-							<h2 class="mb-2">213</h2>
-							<p class="text-muted">Transactions</p>
+							<h2 class="mb-2">---</h2>
+							<p class="text-muted">---</p>
 							<div class="pull-in sparkline-fix">
 								<div id="lineChart"></div>
 							</div>
@@ -105,15 +213,16 @@
 					<div class="card">
 						<div class="card-header">
 							<div class="card-head-row card-tools-still-right">
-								<h4 class="card-title">Users Geolocation</h4>
+								<h4 class="card-title"> Traffic Road Risk [RanKing] </h4>
 								<div class="card-tools">
 									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
+										{% comment %} <img src="/static/dashboard/img/abcabc.png" alt="indonesia"; align='right'> {% endcomment %}
 									<button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
 									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
 								</div>
 							</div>
-							<p class="card-category">
-							Map of the distribution of users around the world</p>
+							{% comment %} <p class="card-category">
+							Map of the distribution of users around the world</p> {% endcomment %}
 						</div>
 						<div class="card-body">
 							<div class="row">
@@ -124,10 +233,10 @@
 												<tr>
 													<td>
 														<div class="flag">
-															<img src="/static/dashboard/img/flags/id.png" alt="indonesia">
+															{% comment %} <img src="/static/dashboard/img/flags/id.png" alt="indonesia"> {% endcomment %}
 														</div>
 													</td>
-													<td>Indonesia</td>
+													<td>[1]<br><br>동묘앞역사거리</td>
 													<td class="text-right">
 														2.320
 													</td>
@@ -138,10 +247,10 @@
 												<tr>
 													<td>
 														<div class="flag">
-															<img src="/static/dashboard/img/flags/us.png" alt="united states">
+															{% comment %} <img src="/static/dashboard/img/flags/us.png" alt="united states"> {% endcomment %}
 														</div>
 													</td>
-													<td>USA</td>
+													<td>[2]<br><br>광하문우체국사거리,세종대로(시청역2)</td>
 													<td class="text-right">
 														240
 													</td>
@@ -152,10 +261,10 @@
 												<tr>
 													<td>
 														<div class="flag">
-															<img src="/static/dashboard/img/flags/au.png" alt="australia">
+															{% comment %} <img src="/static/dashboard/img/flags/au.png" alt="australia"> {% endcomment %}
 														</div>
 													</td>
-													<td>Australia</td>
+													<td>[3]<br><br>   안국역사거리,율곡로(안국역)</td>
 													<td class="text-right">
 														119
 													</td>
@@ -166,10 +275,10 @@
 												<tr>
 													<td>
 														<div class="flag">
-															<img src="/static/dashboard/img/flags/ru.png" alt="russia">
+															{% comment %} <img src="/static/dashboard/img/flags/ru.png" alt="russia"> {% endcomment %}
 														</div>
 													</td>
-													<td>Russia</td>
+													<td>[4]   <br><br>종로3가역사거리,종로(종로3가역)</td>
 													<td class="text-right">
 														1.081
 													</td>
@@ -180,10 +289,10 @@
 												<tr>
 													<td>
 														<div class="flag">
-															<img src="/static/dashboard/img/flags/cn.png" alt="china">
+															{% comment %} <img src="/static/dashboard/img/flags/cn.png" alt="china"> {% endcomment %}
 														</div>
 													</td>
-													<td>China</td>
+													<td>[5]  <br><br> 이화사거리,대학로(한국방송통신대학교)</td>
 													<td class="text-right">
 														1.100
 													</td>
@@ -192,8 +301,8 @@
 													</td>
 												</tr>
 												<tr>
-													<td>
-														<div class="flag">
+													{% comment %} <td> {% endcomment %}
+														{% comment %} <div class="flag">
 															<img src="/static/dashboard/img/flags/br.png" alt="brazil">
 														</div>
 													</td>
@@ -203,7 +312,7 @@
 													</td>
 													<td class="text-right">
 														11.63%
-													</td>
+													</td> {% endcomment %}
 												</tr>
 											</tbody>
 										</table>
@@ -219,7 +328,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			{% comment %} <div class="row">
 				<div class="col-md-4">
 					<div class="card">
 						<div class="card-header">
@@ -494,7 +603,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> {% endcomment %}
 
 {% endblock content %}
 
