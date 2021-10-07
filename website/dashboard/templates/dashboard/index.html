@@ -32,7 +32,8 @@
 			<div class="page-inner">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 					<div>
-						<h1 class="text-white pb-2 fw-bold">Traffic Data Visulization (차조심하조) </h1>
+						<h1 class="text-white pb-2 fw-bold">SERVICE PAGE</h1>
+						{% comment %} <h1 class="text-white pb-2 fw-bold">Traffic Data Visualization</h1> {% endcomment %}
 					</div>
 				</div>
 			</div>
@@ -40,10 +41,22 @@
 		<div class="page-inner mt--5">
 			<div class="row mt--2">
 				<div class="col-md-10 mx-auto">
-					<div id="map" style="width:100%;height:500px;margin-top:70px;margin-bottom:70px;"></div>					
+					<div class="card" style="margin-top: 100px; margin-bottom:100px">
+						<div class="card-header">
+							<div class="card-head-row">
+								<div class="card-title"><b>서울 교통 데이터 통계 분석<b></div>
+								<div class="card-tools"></div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="chart-container" style="min-height: 500px;">
+								<div id="map" style="width:100%;height:500px;"></div>
+							</div>
+						</div>
+					</div>
+										
 				</div>
 			</div>
-
 
 
 
@@ -52,7 +65,7 @@
 					<div class="card">
 						<div class="card-header">
 							<div class="card-head-row">
-								<div class="card-title">Traffic Road Graph</div>
+								<div class="card-title"><b>도로 위험도 그래프<b></div>
 								<div class="card-tools">
 									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
 										<span class="btn-label">
@@ -69,46 +82,32 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="card-body">
-							<div class="chart-container" style="min-height: 500px">
-								{% comment %} <canvas id="statisticsChart"></canvas> {% endcomment %}
+							<div class="chart-container" style="min-height: 300px">
+								<canvas id="statisticsChart"></canvas>
 									<img 
 										src="/static/dashboard/img/abcabc.png"
 										width="100%" 
-										height="200%"
+										height="100%"
 										align="center">
 							</div>
 							<div id="myChartLegend"></div>
 						</div>
 					</div>
 				</div>
+
+
+				
 				<div class="col-md-4">
-					<div class="card card-primary">
-						<div class="card-header">
-							<div class="card-title">Daily Road Traffic risk</div>
-							<div class="card-category">now time 2021-10-06</div>
-						</div>
-						<div class="card-body pb-0">
-							<div class="mb-4 mt-2">
-								<h1><-- 현재 미완성 상태. 예시이미지</h1>
-							</div>
-							<div class="pull-in">
-								<canvas id="dailySalesChart"></canvas>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body pb-0">
-							<div class="h1 fw-bold float-right text-warning">15%</div>
-							<h2 class="mb-2">----</h2>
-							<p class="text-muted">----</p>
-							<div class="pull-in sparkline-fix">
-								<div id="lineChart"></div>
-							</div>
-						</div>
-					</div>
+					
+					
 				</div>
 			</div>
+
+
+
+			
 
 
 
@@ -117,35 +116,26 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div>
-						<canvas id="myChart1"></canvas>
-						<span id='val' style="visibility: hidden;">{{d1}}</span>
+						<canvas id="myChart1"></canvas> 
+						<span id='val' style="visibility: hidden;">{{d1}}</span> 
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-							<div class="card-title">이화사거리</div>
+							<div class="card-title"><b>이화사거리<b></div>
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
 							<div class="mb-4 mt-2">
 								<h1></h1>
 							</div>
-							{% comment %} <div class="pull-in">
+					{% comment %} 		<div class="pull-in">
 								<canvas id="dailySalesChart"></canvas>
 							</div> {% endcomment %}
 						</div>
 					</div>
-					<div class="card">
-						<div class="card-body pb-0">
-							<div class="h1 fw-bold float-right text-warning">+7%</div>
-							<h2 class="mb-2">---</h2>
-							<p class="text-muted">---</p>
-							<div class="pull-in sparkline-fix">
-								<div id="lineChart"></div>
-							</div>
-						</div>
-					</div>
+				
 				</div>
 			</div>
 
@@ -160,28 +150,19 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-							<div class="card-title">광화문우체국사거리</div>
+							<div class="card-title"><b>광화문우체국사거리<b></div>
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
 							<div class="mb-4 mt-2">
 								<h1></h1>
 							</div>
-							{% comment %} <div class="pull-in">
+					{% comment %} 		<div class="pull-in">
 								<canvas id="dailySalesChart"></canvas>
 							</div> {% endcomment %}
 						</div>
 					</div>
-					<div class="card">
-						<div class="card-body pb-0">
-							<div class="h1 fw-bold float-right text-warning">+7%</div>
-							<h2 class="mb-2">---</h2>
-							<p class="text-muted">---</p>
-							<div class="pull-in sparkline-fix">
-								<div id="lineChart"></div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 
@@ -196,28 +177,19 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-							<div class="card-title">안국역사거리</div>
+							<div class="card-title"><b>안국역사거리<b></div>
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
 							<div class="mb-4 mt-2">
 								<h1></h1>
 							</div>
-							{% comment %} <div class="pull-in">
+						{% comment %} 	<div class="pull-in">
 								<canvas id="dailySalesChart"></canvas>
 							</div> {% endcomment %}
 						</div>
 					</div>
-					<div class="card">
-						<div class="card-body pb-0">
-							<div class="h1 fw-bold float-right text-warning">+7%</div>
-							<h2 class="mb-2">---</h2>
-							<p class="text-muted">---</p>
-							<div class="pull-in sparkline-fix">
-								<div id="lineChart"></div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 
@@ -232,28 +204,19 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-							<div class="card-title">동묘앞역사거리</div>
+							<div class="card-title"><b>동묘앞역사거리<b></div>
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
 							<div class="mb-4 mt-2">
 								<h1></h1>
 							</div>
-							{% comment %} <div class="pull-in">
+			{% comment %} 				<div class="pull-in">
 								<canvas id="dailySalesChart"></canvas>
 							</div> {% endcomment %}
 						</div>
 					</div>
-					<div class="card">
-						<div class="card-body pb-0">
-							<div class="h1 fw-bold float-right text-warning">+7%</div>
-							<h2 class="mb-2">---</h2>
-							<p class="text-muted">---</p>
-							<div class="pull-in sparkline-fix">
-								<div id="lineChart"></div>
-							</div>
-						</div>
-					</div>
+		
 				</div>
 			</div>
 
@@ -268,153 +231,29 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-							<div class="card-title">종로3가역사거리</div>
+							<div class="card-title"><b>종로3가역사거리<b></div>
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
 							<div class="mb-4 mt-2">
 								<h1></h1>
 							</div>
-							{% comment %} <div class="pull-in">
+						{% comment %} 	<div class="pull-in">
 								<canvas id="dailySalesChart"></canvas>
 							</div> {% endcomment %}
 						</div>
 					</div>
-					<div class="card">
-						<div class="card-body pb-0">
-							<div class="h1 fw-bold float-right text-warning">+7%</div>
-							<h2 class="mb-2">---</h2>
-							<p class="text-muted">---</p>
-							<div class="pull-in sparkline-fix">
-								<div id="lineChart"></div>
-							</div>
-						</div>
-					</div>
+			
 				</div>
 			</div>
 
 
 
-			<div class="row row-card-no-pd">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header">
-							<div class="card-head-row card-tools-still-right">
-								<h4 class="card-title"> Traffic Road Risk [RanKing] </h4>
-								<div class="card-tools">
-									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
-										{% comment %} <img src="/static/dashboard/img/abcabc.png" alt="indonesia"; align='right'> {% endcomment %}
-									<button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
-									<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
-								</div>
-							</div>
+			
 							{% comment %} <p class="card-category">
 							Map of the distribution of users around the world</p> {% endcomment %}
-						</div>
-						<div class="card-body">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="table-responsive table-hover table-sales">
-										<table class="table">
-											<tbody>
-												<tr>
-													<td>
-														<div class="flag">
-															{% comment %} <img src="/static/dashboard/img/flags/id.png" alt="indonesia"> {% endcomment %}
-														</div>
-													</td>
-													<td>[1]<br><br>동묘앞역사거리</td>
-													<td class="text-right">
-														2.320
-													</td>
-													<td class="text-right">
-														42.18%
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="flag">
-															{% comment %} <img src="/static/dashboard/img/flags/us.png" alt="united states"> {% endcomment %}
-														</div>
-													</td>
-													<td>[2]<br><br>광하문우체국사거리,세종대로(시청역2)</td>
-													<td class="text-right">
-														240
-													</td>
-													<td class="text-right">
-														4.36%
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="flag">
-															{% comment %} <img src="/static/dashboard/img/flags/au.png" alt="australia"> {% endcomment %}
-														</div>
-													</td>
-													<td>[3]<br><br>   안국역사거리,율곡로(안국역)</td>
-													<td class="text-right">
-														119
-													</td>
-													<td class="text-right">
-														2.16%
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="flag">
-															{% comment %} <img src="/static/dashboard/img/flags/ru.png" alt="russia"> {% endcomment %}
-														</div>
-													</td>
-													<td>[4]   <br><br>종로3가역사거리,종로(종로3가역)</td>
-													<td class="text-right">
-														1.081
-													</td>
-													<td class="text-right">
-														19.65%
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="flag">
-															{% comment %} <img src="/static/dashboard/img/flags/cn.png" alt="china"> {% endcomment %}
-														</div>
-													</td>
-													<td>[5]  <br><br> 이화사거리,대학로(한국방송통신대학교)</td>
-													<td class="text-right">
-														1.100
-													</td>
-													<td class="text-right">
-														20%
-													</td>
-												</tr>
-												<tr>
-													{% comment %} <td> {% endcomment %}
-														{% comment %} <div class="flag">
-															<img src="/static/dashboard/img/flags/br.png" alt="brazil">
-														</div>
-													</td>
-													<td>Brasil</td>
-													<td class="text-right">
-														640
-													</td>
-													<td class="text-right">
-														11.63%
-													</td> {% endcomment %}
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="mapcontainer">
-										<div id="map-example" class="vmap"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+					
+			
 			{% comment %} <div class="row">
 				<div class="col-md-4">
 					<div class="card">
@@ -2357,17 +2196,17 @@
 		var polygon = new kakao.maps.Polygon({
 			map: map, // 다각형을 표시할 지도 객체
 			path: area.path,
-			strokeWeight: 2,
-			strokeColor: '#004c80',
+			strokeWeight: 3,
+			strokeColor: '#524848',
 			strokeOpacity: 0.8,
-			fillColor: '#fff',
-			fillOpacity: 0.7 
+			fillColor: '#b3ddb4',
+			fillOpacity: 0.8 
 		});
 
 		// 다각형에 mouseover 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 변경합니다 
 		// 지역명을 표시하는 커스텀오버레이를 지도위에 표시합니다
 		kakao.maps.event.addListener(polygon, 'mouseover', function(mouseEvent) {
-			polygon.setOptions({fillColor: '#09f'});
+			polygon.setOptions({fillColor: '#FFAD46'});
 
 			customOverlay.setContent('<div class="area" style="font-weight:bold;">' + area.name + '</div>');
 			
