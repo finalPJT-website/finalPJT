@@ -1,9 +1,19 @@
 from django.shortcuts import render
+from dashboard.traffic_predict import model_load
+from numpyencoder import NumpyEncoder
+import json
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'dashboard/index.html')
+    d1, d2, d3, d4, d5 = model_load()
+    return render(request, 'dashboard/index.html', {
+                                        'd1': d1.to_json(),
+                                        'd2': d2.to_json(),
+                                        'd3': d3.to_json(),
+                                        'd4': d4.to_json(),
+                                        'd5': d5.to_json()
+                                        })
 
 def kangnam(request):
     return render(request, 'dashboard/details/강남구.html')
