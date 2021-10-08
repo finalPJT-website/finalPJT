@@ -48,9 +48,9 @@
 
 
 		<div class="page-inner mt--5">
-			<div class="row mt--2">
+			<div class="row mt--2" >
 				<div class="col-md-10 mx-auto">
-					<div class="card" style="margin-top: 100px; margin-bottom:100px">
+					<div class="card" style="margin-top: 100px; margin-bottom:100px; align:left;">
 						<div class="card-header">
 							<div class="card-head-row">
 								<div class="card-title"><b>서울 교통 데이터 통계 분석<b></div>
@@ -69,16 +69,13 @@
 
 
 
+
 			<div class="row">
 				<div class="col-md-8">
 					<div class="card">
 						<div class="card-header">
 							<div class="card-head-row">
-<<<<<<< HEAD
-								<div class="card-title"><b>Google 교통사고 뉴스 키워드 <b></div>
-=======
-								<div class="card-title"><b>도로 위험도 그래프<b></div>
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
+								<div class="card-title"><b>종로구 도로 위험도 지도<b></div>
 								<div class="card-tools">
 									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
 										<span class="btn-label">
@@ -97,23 +94,60 @@
 						</div>
 						
 						<div class="card-body">
-<<<<<<< HEAD
-							<div class="chart-container" style="min-height: 500px;">
-								<canvas id="statisticsChart"></canvas>
+							<div class="chart-container" style="min-height: 80px">
+								{% comment %} <canvas id="statisticsChart"></canvas> {% endcomment %}
+									<img 
+										src="/static/dashboard/img/signal.png"
+										width="100%" 
+										height="80%"
+										align="center">
+							</div>
+							<div id="myChartLegend"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+			<div class="row">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-head-row">
+								<div class="card-title"><b>Google 교통사고 뉴스 키워드 <b></div>
+								<div class="card-tools">
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
+										<span class="btn-label">
+											<i class="fa fa-pencil"></i>
+										</span>
+										Export
+									</a>
+									<a href="#" class="btn btn-info btn-border btn-round btn-sm">
+										<span class="btn-label">
+											<i class="fa fa-print"></i>
+										</span>
+										Print
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card-body">
+							<div class="chart-container" style="min-height: 400px;">
+								{% comment %} <canvas id="statisticsChart"></canvas> {% endcomment %}
 									<img 
 										src="/static/dashboard/img/뉴스5_워드클라우드.png"
 										width="70%" 
 										height="70%"
 										align="left">
-=======
-							<div class="chart-container" style="min-height: 300px">
-								<canvas id="statisticsChart"></canvas>
-									<img 
-										src="/static/dashboard/img/abcabc.png"
-										width="100%" 
-										height="100%"
-										align="center">
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
 							</div>
 							<div id="myChartLegend"></div>
 						</div>
@@ -146,11 +180,7 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-<<<<<<< HEAD
 							<div class="card-title"><b>실시간 이화사거리 예측 교통량<b></div>
-=======
-							<div class="card-title"><b>이화사거리<b></div>
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
@@ -177,11 +207,7 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-<<<<<<< HEAD
 							<div class="card-title"><b>실시간 광화문우체국사거리 예측 교통량<b></div>
-=======
-							<div class="card-title"><b>광화문우체국사거리<b></div>
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
@@ -208,11 +234,7 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-<<<<<<< HEAD
 							<div class="card-title"><b>실시간 안국역사거리 예측 교통량<b></div>
-=======
-							<div class="card-title"><b>안국역사거리<b></div>
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
@@ -239,11 +261,7 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-<<<<<<< HEAD
 							<div class="card-title"><b>실시간 동묘앞역사거리 예측 교통량<b></div>
-=======
-							<div class="card-title"><b>동묘앞역사거리<b></div>
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
@@ -270,11 +288,7 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-<<<<<<< HEAD
 							<div class="card-title"><b>실시간 종로3가역사거리 예측 교통량<b></div>
-=======
-							<div class="card-title"><b>종로3가역사거리<b></div>
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
 							<div onload="showClock()" id="divClock" class="card-category"></div>
 						</div>
 						<div class="card-body pb-0">
@@ -2242,11 +2256,7 @@
 			strokeWeight: 3,
 			strokeColor: '#524848',
 			strokeOpacity: 0.8,
-<<<<<<< HEAD
 			fillColor: '#97eeea',
-=======
-			fillColor: '#b3ddb4',
->>>>>>> 3d6a0eb0cbdbffad052f30e1193f9285a15cb39a
 			fillOpacity: 0.8 
 		});
 
